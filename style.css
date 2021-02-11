@@ -1,0 +1,315 @@
+    .head img {
+        height: 100px;
+        width: 100px;
+        float: left;
+    }
+    
+    h1 {
+        font-size: 80px;
+        float: center;
+        padding-left: 300px;
+        color: #cc0052;
+        font-family: 'Russo One', sans-serif;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(243, 20, 169);
+    }
+    
+    li {
+        float: left;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    li a:hover {
+        background-color: rgb(206, 78, 184);
+    }
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif width: 100%;
+        min-height: 45rem;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-align: center;
+        background-color: whitesmoke;
+    }
+    
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 800px
+    }
+    /* Basic appearance stuff ends here */
+    /* Parallax Horizontal Scroller - by Bree Dulmage, 2020 */
+    
+    #proparallax {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        min-height: 37.5rem;
+        border: 10px solid black;
+        box-shadow: 0px 8px 10px 8px rgb(206, 154, 184);
+    }
+    
+    #proparallax img {
+        position: absolute;
+        width: 50rem;
+        height: 37.5rem;
+        overflow: hidden;
+        object-fit: cover;
+    }
+    
+    @keyframes parallax_one {
+        /* controls img.one movement */
+        0% {
+            /* .imageloaded */
+            height: 37.5rem;
+            width: 50rem;
+            left: 0rem;
+            opacity: 1;
+        }
+        /* .imagehold runs from 0 to 27.77% */
+        27.77% {
+            /* .imageloaded */
+            width: 50rem;
+            left: 0rem;
+        }
+        27.78% {
+            /* .imagepreunload */
+            width: 50rem;
+            left: 0rem;
+            right: 50rem;
+        }
+        33.33% {
+            /* .imageunloaded */
+            height: 37.5rem;
+            width: 0rem;
+            left: 0rem;
+            right: 0rem;
+            opacity: 1;
+        }
+        33.34% {
+            /* imageoff */
+            opacity: 0;
+        }
+        94.43% {
+            /* .imageon */
+            left: 0rem;
+            opacity: 0;
+        }
+        94.44% {
+            /* .imageinitial */
+            height: 37.5rem;
+            width: 0rem;
+            left: 50rem;
+            opacity: 1;
+        }
+        100% {
+            /* .imageloaded */
+            width: 50rem;
+            left: 0rem;
+            opacity: 1;
+        }
+    }
+    
+    @keyframes parallax_two {
+        /* controls img.two movement */
+        0% {
+            /* .imageoff */
+            opacity: 0;
+        }
+        27.77% {
+            /* .imageon */
+            left: 0rem;
+            opacity: 0;
+        }
+        27.78% {
+            /* .imageinitial */
+            width: 0rem;
+            height: 37.5rem;
+            left: 50rem;
+            opacity: 1;
+        }
+        33.33% {
+            /* .imageloaded */
+            width: 50rem;
+            left: 0rem;
+        }
+        /* .imagehold runs from 33.34% - 61.10% */
+        61.10% {
+            /* .imageloaded */
+            width: 50rem;
+            left: 0rem;
+        }
+        61.11% {
+            /* .imagepreunload */
+            width: 50rem;
+            left: 0rem;
+            right: 50rem;
+        }
+        66.67% {
+            /* .imageunloaded */
+            width: 0rem;
+            right: 0rem;
+            left: 0rem;
+            height: 37.5rem;
+            opacity: 1;
+        }
+        66.68% {
+            /* .imageoff */
+            opacity: 0;
+        }
+        100% {
+            /* .imageoff */
+            opacity: 0;
+        }
+    }
+    
+    @keyframes parallax_three {
+        /* controls img.three movement */
+        0% {
+            /* .imageoff */
+            opacity: 0;
+        }
+        61.10% {
+            /* .imageon */
+            opacity: 0;
+        }
+        61.11% {
+            /* .imageinitial */
+            width: 0rem;
+            height: 37.5rem;
+            left: 50rem;
+            opacity: 1;
+        }
+        66.67% {
+            /* .imageloaded */
+            width: 50rem;
+            left: 0rem;
+        }
+        /* .imagehold runs from 66.67% - 94.43% */
+        94.43% {
+            /* .imageloaded */
+            width: 50rem;
+            left: 0rem;
+        }
+        94.44% {
+            /* .imagepreunload */
+            width: 50rem;
+            left: 0rem;
+            right: 50rem;
+        }
+        100% {
+            /* imageunloaded */
+            width: 0rem;
+            right: 0rem;
+            left: 0rem;
+            height: 37.5rem;
+            opacity: 1;
+        }
+    }
+    
+    #proparallax img.one {
+        animation-name: parallax_one;
+        /* controls img.one movement */
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 18s;
+        animation-direction: forwards;
+        object-fit: cover;
+    }
+    
+    #proparallax img.two {
+        animation-name: parallax_two;
+        /* controls img.two movement */
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 18s;
+        animation-direction: forwards;
+        object-fit: cover;
+    }
+    
+    #proparallax img.three {
+        animation-name: parallax_three;
+        /* controls img.three movement */
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 18s;
+        animation-direction: forwards;
+        object-fit: cover;
+    }
+    /* Main column */
+    
+    .main {
+        -ms-flex: 70%;
+        /* IE10 */
+        flex: 70%;
+        background-color: white;
+        padding: 20px;
+    }
+    /* Fake image, just for this example */
+    
+    .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .main h2 {
+        margin: auto;
+        color: #cc0052;
+    }
+    
+    .main img {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .erbjudande img {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .container {
+        -ms-flex: 30%;
+        flex: 30%;
+        padding: 20px;
+        display: inline-block;
+    }
+    
+    .btn {
+        background: rgb(185, 88, 161);
+        height: 50px;
+        min-width: 150px;
+        border: none;
+        border-radius: 10px;
+        color: #eee;
+        font-size: 40px;
+        font-family: 'Cookie', cursive;
+        position: sticky;
+        transition: 1s;
+        -webkit-tap-highlight-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding-top: 5px;
+        margin: 0%;
+    }
+    
+    .foot {
+        font-family: cursive;
+    }
